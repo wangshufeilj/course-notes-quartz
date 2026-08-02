@@ -31,6 +31,35 @@ export default (() => {
     const socialUrl =
       fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
 
+    const fm = fileData.frontmatter as Record<string, unknown> | undefined
+    const contentType = fm?.type
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type":
+        contentType === "lesson"
+          ? "LearningResource"
+          : contentType === "course"
+            ? "Course"
+            : "WebPage",
+      name: title,
+      description,
+      url: socialUrl,
+      inLanguage: cfg.locale,
+      isPartOf: {
+        "@type": "WebSite",
+        name: cfg.pageTitle,
+        url: url.toString(),
+      },
+      ...(contentType === "lesson"
+        ? {
+            learningResourceType: "Lesson",
+            position: fm?.order,
+            about: fm?.section,
+            sameAs: fm?.source,
+          }
+        : {}),
+    }
+
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
       (e) => e.name === CustomOgImagesEmitterName,
     )
@@ -83,8 +112,14 @@ export default (() => {
         )}
 
         <link rel="icon" href={iconPath} />
+        <link rel="canonical" href={socialUrl} />
+        <link rel="alternate" hrefLang="zh-CN" href={socialUrl} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js

@@ -1,0 +1,19 @@
+{
+  "notes": [
+    {
+      "source": "C:\\path\\to\\your-note.md",
+      "output": "content/courses/course-id/lesson-01.md",
+      "title": "第01讲 示例",
+      "courseId": "course-id",
+      "section": "第一章 示例",
+      "order": 1,
+      "permalink": "/courses/course-id/lesson-01",
+      "author": "课程讲师",
+      "sourceUrl": "https://www.bilibili.com/video/BV...?t=0",
+      "date": "2026-01-01",
+      "tags": ["课程笔记"],
+      "expectedImages": 0,
+      "expectedTimestampLinks": 0
+    }
+  ]
+}

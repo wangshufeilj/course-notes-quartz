@@ -34,7 +34,9 @@ export const Latex: QuartzTransformerPlugin<Partial<Options>> = (opts) => {
     htmlPlugins() {
       switch (engine) {
         case "katex": {
-          return [[rehypeKatex, { output: "html", macros, ...(opts?.katexOptions ?? {}) }]]
+          // Keep visual KaTeX HTML and semantic MathML together so screen
+          // readers, search engines, and agents can recover formula meaning.
+          return [[rehypeKatex, { output: "htmlAndMathml", macros, ...(opts?.katexOptions ?? {}) }]]
         }
         case "typst": {
           return [[rehypeTypst, opts?.typstOptions ?? {}]]

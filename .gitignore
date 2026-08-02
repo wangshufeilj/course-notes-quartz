@@ -7,5 +7,9 @@ tsconfig.tsbuildinfo
 .obsidian
 .quartz-cache
 private/
+.publish.local.json
+scripts/.publish-report.json
+.quartz-preview.out.log
+.quartz-preview.err.log
 .replit
 replit.nix

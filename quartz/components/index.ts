@@ -23,6 +23,16 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import BrandHeader from "./BrandHeader"
+import ThemeFamilyToggle from "./ThemeFamilyToggle"
+import CourseCatalog from "./CourseCatalog"
+import CourseHero from "./CourseHero"
+import CourseOutline from "./CourseOutline"
+import CourseNavigation from "./CourseNavigation"
+import LessonHeader from "./LessonHeader"
+import LessonPager from "./LessonPager"
+import ReadingProgress from "./ReadingProgress"
+import BrandFooter from "./BrandFooter"
 
 export {
   ArticleTitle,
@@ -50,4 +60,14 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  BrandHeader,
+  ThemeFamilyToggle,
+  CourseCatalog,
+  CourseHero,
+  CourseOutline,
+  CourseNavigation,
+  LessonHeader,
+  LessonPager,
+  ReadingProgress,
+  BrandFooter,
 }

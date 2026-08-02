@@ -152,6 +152,17 @@ declare module "vfile" {
         cssclasses: string[]
         socialImage: string
         comments: boolean | string
+        type: "library" | "course" | "lesson"
+        courseId: string
+        courseCode: string
+        section: string
+        status: string
+        statusLabel: string
+        instructor: string
+        totalLessons: number
+        order: number
+        source: string
+        permalink: string
       }>
   }
 }

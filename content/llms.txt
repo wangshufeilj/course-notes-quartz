@@ -1,0 +1,17 @@
+# M-Link Tech Notebook
+
+> 连接课程、概念与实践的中文电子教材网站。正文为可解析的语义化 HTML，公式保留 LaTeX 语义，视频时间戳链接可直接跳转来源视频。
+
+- [课程书库](https://wangshufeilj.github.io/course-notes-quartz/courses/): 全部课程入口
+- [27考季数量关系大满贯](https://wangshufeilj.github.io/course-notes-quartz/courses/27-kaoji-shuliang/): 课程目录
+- [第01讲 和差倍比问题（一）](https://wangshufeilj.github.io/course-notes-quartz/courses/27-kaoji-shuliang/lesson-01): 第一讲全文
+- [关于本站](https://wangshufeilj.github.io/course-notes-quartz/about): 内容来源与站点定位
+- [Sitemap](https://wangshufeilj.github.io/course-notes-quartz/sitemap.xml): 机器可读页面索引
+- [RSS](https://wangshufeilj.github.io/course-notes-quartz/index.xml): 更新订阅
+
+## 内容约定
+
+- URL 使用稳定英文 slug，标题和正文使用中文。
+- 讲次页 frontmatter 包含 `type`、`courseId`、`section`、`order`、`source` 和 `date`。
+- Bilibili 链接仅保留 BV 地址、分集 `p` 和定位秒数 `t`。
+- 网站不发布课程截图；LaTeX 由 KaTeX 渲染，不使用公式图片。

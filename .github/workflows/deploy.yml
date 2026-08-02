@@ -1,3 +1,4 @@
+# Build the static textbook and publish it through GitHub Pages.
 name: Deploy M-Link Tech Notebook
 
 on:
